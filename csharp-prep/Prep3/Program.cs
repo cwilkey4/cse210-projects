@@ -5,9 +5,11 @@ class Program
     static void Main(string[] args)
     {
         // Ask first for the magic number. (Later, change this to a randomized number)
-        Console.Write("What is the magic number? ");
-        string cwuserNumber = Console.ReadLine();
-        int cwmagicNumber = int.Parse(cwuserNumber);
+        Random cwrandomGenerator = new Random;    //
+        int cwNumber = cwrandomGenerator.Next(1, 101); //
+        // Console.Write("What is the magic number? ");
+        // string cwuserNumber = Console.ReadLine();
+        // int cwmagicNumber = int.Parse(cwuserNumber);
 
         string input = "yes";
         
@@ -19,11 +21,11 @@ class Program
             int cwguessedNumber = int.Parse(cwuserGuess);
 
             // Using an if statement, determine if the user needs to guess higher or lower. (No Loops for now)
-            if (cwguessedNumber > cwmagicNumber)
+            if (cwguessedNumber > cwNumber)
             {
                 Console.WriteLine("Lower");
             }
-            else if (cwguessedNumber < cwmagicNumber)
+            else if (cwguessedNumber < cwNumber)
             {
                 Console.WriteLine("Higher");
             }
@@ -35,4 +37,6 @@ class Program
         }
 
     }
+
+    // Stretch Challenges can still be done.
 }
