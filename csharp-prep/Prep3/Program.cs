@@ -5,7 +5,7 @@ class Program
     static void Main(string[] args)
     {
         // Ask first for the magic number. (Later, change this to a randomized number)
-        Random cwrandomGenerator = new Random;    //
+        Random cwrandomGenerator = new Random();    //
         int cwNumber = cwrandomGenerator.Next(1, 101); //
         // Console.Write("What is the magic number? ");
         // string cwuserNumber = Console.ReadLine();
