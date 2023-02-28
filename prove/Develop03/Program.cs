@@ -8,11 +8,13 @@ class Program
 {
     static void Main(string[] args)
     {
-        Reference reference = new Reference();
-        string wipbook = reference.getBook();
-        int wipchapter = reference.getChapter();
-        int wipverse = reference.getVerse();
-        int wipendVerse = reference.getEndVerse();
+        Reference reference1 = new Reference();
+        string wipbook = "2 Nephi";
+
+        // string wipbook = reference1.wipbook;
+        // int wipchapter = reference1.getChapter();
+        // int wipverse = reference1.getVerse();
+        // int wipendVerse = reference1.getEndVerse();
 
         Scripture scripture = new Scripture();
         string wipscriptureWords = scripture.getScripture();
