@@ -7,6 +7,13 @@ namespace FinalProject {
         private string _genre;
         private string _narrator;
 
+        // Item.GetTitle();
+        // Item.SetTitle();
+        // Item.GetGenre();
+        // Item.SetGenre();
+        // Book.GetAuthor();
+        // Book.SetAuthor();
+
         protected string GetNarrator() {
             return _narrator;
         }
@@ -22,5 +29,10 @@ namespace FinalProject {
         // protected void SetGenre(string genre) {
         //     _genre = genre;
         // }
+
+        protected override string GetDetails()
+        {
+            return $"{_title} by {_author}. Narrated by {_narrator}. ({_genre})";
+        }
     }
 }

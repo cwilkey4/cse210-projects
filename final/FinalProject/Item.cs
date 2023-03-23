@@ -1,7 +1,7 @@
 using System;
 
 namespace FinalProject {
-    public class Item {
+    public abstract class Item {
         //
         private string _title;
         private string _genre;
@@ -23,7 +23,8 @@ namespace FinalProject {
             _genre = genre;
         }
 
-        // public virtual string GetInformation {
+        public abstract string GetDetails();
+        // public virtual string GetDetails() {
         //     return $"{_title} {_genre}";
         // }
     }

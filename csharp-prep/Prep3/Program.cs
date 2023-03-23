@@ -12,9 +12,11 @@ class Program
         // int cwmagicNumber = int.Parse(cwuserNumber);
 
         string input = "yes";
+        int cwcount = 0;
         
         while (input == "yes")
         {
+            cwcount = cwcount + 1;
             // Ask for a guess
             Console.WriteLine("What is your guess? ");
             string cwuserGuess = Console.ReadLine();
@@ -35,6 +37,9 @@ class Program
                 input = "nope";
             }
         }
+        string cwcountTotal = cwcount.ToString();
+        
+        Console.WriteLine($"It took you {cwcountTotal} tries!");
 
     }
 

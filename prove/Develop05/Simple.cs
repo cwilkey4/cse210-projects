@@ -15,9 +15,8 @@ public class Simple : Goal
         return totalPoints + pointsEarned;
     }
 
-    protected override int RecordEvent()
-    {
-        //
+    protected override int RecordEvent(string fileName, string userGoal) {
+        return 0;
     }
 
 }

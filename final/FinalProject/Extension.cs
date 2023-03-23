@@ -1,7 +1,7 @@
 using System;
 
 namespace FinalProject {
-    public class Extention : CheckOut {
-        //
-    }
+    // public class Extention : CheckOut {
+    //     //
+    // }
 }

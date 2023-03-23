@@ -2,7 +2,10 @@ using System;
 
 namespace FinalProject
 {
-    public class CheckOut {
-        //
-    }
+    // public class CheckOut {
+    //     // 
+    //     protected int CheckOut(string cwitem) {
+
+    //     }
+    // }
 }

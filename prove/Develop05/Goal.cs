@@ -2,7 +2,7 @@ using System;
 
 namespace Develop05
 {
-    public class Goal
+    public abstract class Goal
     {
         private string GoalName = "";
         private string Description = "";
@@ -21,28 +21,36 @@ namespace Develop05
             return totalPoints;
         }
 
-        protected virtual int RecordEvent(string fileName, string userGoal)
-        {
-            // We need to retrieve whatever goal the user has accomplished from a number
-            string[] lines = System.IO.File.ReadAllLines(fileName);
+        /*
+        RecordEvent(): 
+            * Update goals that are listed in the file
+            * If simple goal, mark a goal is completed 
+            * If eternal goal, it only adds points
+            * If checklist goal, increment the number of completions add add points; also
+                check if the goal is entirely complete and add bonus points if yes
+        */
+        protected abstract int RecordEvent(string fileName, string userGoal);
+        // {
+        //     // We need to retrieve whatever goal the user has accomplished from a number
+        //     string[] lines = System.IO.File.ReadAllLines(fileName);
 
-            foreach (string line in lines)
-            {   
-                // Don't forget to skip the first line -- that contains the total points!
-                string[] parts = line.Split(",");
+        //     foreach (string line in lines)
+        //     {   
+        //         // Don't forget to skip the first line -- that contains the total points!
+        //         string[] parts = line.Split(",");
 
-                string goalType = parts[0];
-                string goalName = parts[1];
-                string goalDescription = parts[2];
-                string points = parts[3];
-                // string bonusPoints = parts[4]; (Checklist only!!) 
+        //         string goalType = parts[0];
+        //         string goalName = parts[1];
+        //         string goalDescription = parts[2];
+        //         string points = parts[3];
+        //         // string bonusPoints = parts[4]; (Checklist only!!) 
                 
-                int goalPoints = int.Parse(points);
-            }
-            // Then we are going to get the total amount of points from it
+        //         int goalPoints = int.Parse(points);
+        //     }
+        //     // Then we are going to get the total amount of points from it
 
-            return goalPoints;
-        }
+        //     return goalPoints;
+        // }
 
         //     if (!isCompleted)
         //     {
