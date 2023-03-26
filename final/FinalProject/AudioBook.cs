@@ -30,9 +30,9 @@ namespace FinalProject {
         //     _genre = genre;
         // }
 
-        protected override string GetDetails()
-        {
-            return $"{_title} by {_author}. Narrated by {_narrator}. ({_genre})";
-        }
+        // protected override string GetDetails()
+        // {
+        //     return $"{_title} by {_author}. Narrated by {_narrator}. ({_genre})";
+        // }
     }
 }

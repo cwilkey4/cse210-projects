@@ -34,10 +34,10 @@ namespace FinalProject {
         //     _genre = genre;
         // }
 
-        protected override string GetDetails()
-        {
-            return $"{_title} by {_author}. ({_genre})";
-        }
+        // protected override string GetDetails()
+        // {
+        //     return $"{_title} by {_author}. ({_genre})";
+        // }
 
     }
 }
