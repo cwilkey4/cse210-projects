@@ -1,9 +1,7 @@
 using System;
 
 namespace FinalProject {
-    // Make this an abstract class
-    public class Item {
-        //
+    public abstract class Item {
         private string _title;
         private string _genre;
 
@@ -23,13 +21,6 @@ namespace FinalProject {
         protected void SetGenre(string genre) {
             _genre = genre;
         }
-
-        // Make "Get Details" an abstract method.
-        // public abstract string GetDetails();
-
-
-        // public virtual string GetDetails() {
-        //     return $"{_title} {_genre}";
-        // }
+        public abstract string GetDetails();
     }
 }

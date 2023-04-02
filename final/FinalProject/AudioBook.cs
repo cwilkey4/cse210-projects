@@ -2,37 +2,37 @@ using System;
 
 namespace FinalProject {
     public class AudioBook : Book {
-        private string _title;
-        private string _author;
-        private string _genre;
-        private string _narrator;
+        private string _cwtitle;
+        private string _cwauthor;
+        private string _cwgenre;
+        private string _cwnarrator;
 
-        // Item.GetTitle();
-        // Item.SetTitle();
-        // Item.GetGenre();
-        // Item.SetGenre();
-        // Book.GetAuthor();
-        // Book.SetAuthor();
+        // _cwtitle = Item.GetTitle();
+        // Item.SetTitle(string cwtitle);
+        // _cwgenre = Item.GetGenre();
+        // Item.SetGenre(string cwgenre);
+        // _cwauthor = Book.GetAuthor();
+        // Book.SetAuthor(string cwtitle);
 
         protected string GetNarrator() {
-            return _narrator;
+            return _cwnarrator;
         }
 
         protected void SetNarrator(string narrator) {
-            _narrator = narrator;
+            _cwnarrator = narrator;
         }
 
-        // protected string GetGenre() {
-        //     return _genre;
-        // }
 
-        // protected void SetGenre(string genre) {
-        //     _genre = genre;
-        // }
-
-        // protected override string GetDetails()
-        // {
-        //     return $"{_title} by {_author}. Narrated by {_narrator}. ({_genre})";
-        // }
+        public void SetDetails(string cwtitle, string cwauthor, string cwnarrator, string cwgenre)
+        {
+            _cwtitle = cwtitle;
+            _cwauthor = cwauthor;
+            _cwnarrator = cwnarrator;
+            _cwgenre = cwgenre;
+        }
+        public override string GetDetails()
+        {
+            return $"{_cwtitle} by {_cwauthor}. Narrated by {_cwnarrator}. ({_cwgenre})";
+        }
     }
 }

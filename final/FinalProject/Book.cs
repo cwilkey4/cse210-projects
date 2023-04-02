@@ -2,9 +2,9 @@ using System;
 
 namespace FinalProject {
     public class Book : Item {
-        private string _title;
-        private string _author;
-        private string _genre;
+        private string _cwtitle;
+        private string _cwauthor;
+        private string _cwgenre;
 
         // In Item.cs
         // protected string GetTitle() {
@@ -17,13 +17,13 @@ namespace FinalProject {
         // Item.GetTitle
         // Item.SetTitle
 
-        protected string GetAuthor() {
-            return _author;
-        }
+        // protected string GetAuthor() {
+        //     return _cwauthor;
+        // }
 
-        protected void SetAuthor(string author) {
-            _author = author;
-        }
+        // protected void SetAuthor(string cwauthor) {
+        //     _cwauthor = cwauthor;
+        // }
 
         // In Item.cs
         // protected string GetGenre() {
@@ -34,10 +34,16 @@ namespace FinalProject {
         //     _genre = genre;
         // }
 
-        // protected override string GetDetails()
-        // {
-        //     return $"{_title} by {_author}. ({_genre})";
-        // }
+        public void SetDetails(string cwtitle, string cwauthor, string cwgenre)
+        {
+            _cwtitle = cwtitle;
+            _cwauthor = cwauthor;
+            _cwgenre = cwgenre;
+        }
 
+        public override string GetDetails()
+        {
+            return $"{_cwtitle} by {_cwauthor}. ({_cwgenre})";
+        }
     }
 }
